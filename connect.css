@@ -1,0 +1,103 @@
+body {
+    position:relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 3000px; 
+    background-color: #F4EFEF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* Header */
+.header-container {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    justify-content: flex-end;
+    align-items:center;
+    padding: 20px;
+}
+
+
+/* Logo */
+.header-logo img {
+    position:absolute;
+    width: 80px;
+    top:15px;
+    left: 20px;
+    cursor: pointer; 
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.header-logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Navigation */
+.nav-buttons {
+    position: absolute; 
+    top: 0; 
+    right: 0;
+    display: flex;
+    gap: 2vw;
+    font-size: 1.6rem;
+    padding: 2rem;
+    font-weight: bold;
+    font-family: 'Jockey One', sans-serif;
+}
+
+
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    font-family: 'Georgia', serif;
+    margin-top:450px;
+}
+
+h2 {
+    font-size: 45px;
+    margin-top: 600px;
+    font-family: 'Georgia', serif;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 500px;
+}
+
+.icons a img {
+    width: 40px;
+    height: 40px;
+} 
+
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+}
+
+
+.navbar a:hover {
+    transform: scale(1.1);
+}
+
+
+
+footer{
+    position: absolute;
+    bottom: 0;
+
+}    
+
+
+
+
+
