@@ -6,12 +6,26 @@
     <title>Ashley Chang | UX/UI Portfolio</title>
     <link rel="stylesheet" href="about.css">
     <script type="module" src="script.js"></script>
+    <script type="module" src="about.js"></script>
+<script src="work.js"></script>
+<link rel="stylesheet" href="work.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="favicon.png">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        gsap.to(".marquee-content", {
+            x: "-100%", 
+            ease: "linear",
+            duration: 10, 
+            repeat: -1
+        });
+    </script>
 </head>
 <body>
+    <div class="page">
     <header>
         <div class="header-container">
             <a href="index.html" class="header-logo">
@@ -19,6 +33,7 @@
             </a>
             <nav class="navbar">
                 <div class="nav-buttons">
+                    <button id="theme-toggle" class="toggle-button">🌚</button>
                     <a href="about.html" class="aboutmebutton">About me</a>
                     <a href="work.html" class="myworkbutton">My Work</a>
                     <a href="connect.html" class="letsconnectbutton">Let's Connect</a>
@@ -49,18 +64,75 @@
                         with the goal of creating meaningful digital experiences that people love to use.
                     </p>
             </div>
+            <section class="marquee-container">
+                <div class="marquee">
+                    <div class="marquee-track">
+                        <div class="tool"><i class="fa-brands fa-figma"></i> Figma</div>
+                        <div class="tool"><i class="fa-solid fa-pencil-ruler"></i> Adobe XD</div>
+                        <div class="tool"><i class="fa-brands fa-sketch"></i> Sketch</div>
+                        <div class="tool"><i class="fa-solid fa-lightbulb"></i> InVision</div>
+                        <div class="tool"><i class="fa-solid fa-network-wired"></i> Miro</div>
+                        <div class="tool"><i class="fa-solid fa-note-sticky"></i> Notion</div>
+                        <div class="tool"><i class="fa-brands fa-github"></i> GitHub</div>
+                        <div class="tool"><i class="fa-brands fa-html5"></i> HTML</div>
+                        <div class="tool"><i class="fa-brands fa-css3-alt"></i> CSS</div>
+                        <div class="tool"><i class="fa-brands fa-js"></i> JavaScript</div>
+                        <div class="tool"><i class="fa-brands fa-react"></i> React</div>
+                        <div class="tool"><i class="fa-solid fa-code"></i> VS Code</div>
+            
+                        
+                        <div class="tool"><i class="fa-brands fa-figma"></i> Figma</div>
+                        <div class="tool"><i class="fa-solid fa-pencil-ruler"></i> Adobe XD</div>
+                        <div class="tool"><i class="fa-brands fa-sketch"></i> Sketch</div>
+                        <div class="tool"><i class="fa-solid fa-lightbulb"></i> InVision</div>
+                        <div class="tool"><i class="fa-solid fa-network-wired"></i> Miro</div>
+                        <div class="tool"><i class="fa-solid fa-note-sticky"></i> Notion</div>
+                        <div class="tool"><i class="fa-brands fa-github"></i> GitHub</div>
+                        <div class="tool"><i class="fa-brands fa-html5"></i> HTML</div>
+                        <div class="tool"><i class="fa-brands fa-css3-alt"></i> CSS</div>
+                        <div class="tool"><i class="fa-brands fa-js"></i> JavaScript</div>
+                        <div class="tool"><i class="fa-brands fa-react"></i> React</div>
+                        <div class="tool"><i class="fa-solid fa-code"></i> VS Code</div>
+                    </div>
+                </div>
+                <div class="about-extra-container">
+                    <p class="location">📍 Based in Houston, excited about both local and remote opportunities.</p>
+                </div>
+            </section>
             <div class="outside-content">
                     <h2 class="section-title">Outside of Design</h2>
                     <p>
-                        I'm a passionate cellist. Playing the cello gives me a deep appreciation for creativity, 
+                        🎻 I'm a passionate cellist. Playing the cello gives me a deep appreciation for creativity, 
                         rhythm, and harmony—something I try to bring into my design work as well.
                     </p>
+                    <p>🐶 I also have two dogs who make sure I never take life too seriously. </p>
                 </div>
 
-                <!-- Right: Extra Info -->
-                <div class="about-extra-container">
-                    <p class="location">📍 Based in Houston, excited about opportunities in the area.</p>
+                <div class="slideshow-container">
+                    <div class="slide"><img src="images/Dog1.jpg" alt="Dog 1"></div>
+                    <div class="slide"><img src="images/Dog2.jpg" alt="Dog 2"></div>
+                    <div class="slide"><img src="images/Dog3.jpg" alt="Dog 3"></div>
+                    <div class="slide"><img src="images/Dog4.jpg" alt="Dog 4"></div>
+                    <div class="slide"><img src="images/Dog5.jpg" alt="Dog 5"></div>
+                    <div class="slide"><img src="images/Dog6.jpg" alt="Dog 6"></div>
+                    <div class="slide"><img src="images/Dog7.jpg" alt="Dog 7"></div>
+                    <div class="slide"><img src="images/Dog8.jpg" alt="Dog 8"></div>
+                    <div class="slide"><img src="images/Dog9.jpg" alt="Dog 9"></div>
+                    <div class="slide"><img src="images/Dog10.jpg" alt="Dog 10"></div>
                 </div>
+                
+                
+                
+                
+                
+                
+
+                
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+                
+
+                
+                
             </div>
         </div>
     </main>
@@ -68,5 +140,6 @@
         <img src="images/Dog.png" alt="Dog">
         <p>@ 2025 Ashley Chang. All Rights Reserved.</p>
     </footer>
+</div>
 </body>
 </html>
