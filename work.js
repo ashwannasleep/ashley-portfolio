@@ -1,30 +1,25 @@
 document.addEventListener("DOMContentLoaded", function () {
     const toggleButton = document.getElementById("theme-toggle");
-
-    if (!toggleButton) {
-        console.error("Dark mode toggle button not found!");
-        return;
-    }
-
-    // Load theme from localStorage
-    if (localStorage.getItem("theme") === "dark") {
+    const currentTheme = localStorage.getItem("theme");
+    const themeIcon = toggleButton.querySelector("img"); 
+    if (currentTheme === "dark") {
         document.body.classList.add("dark-mode");
-        toggleButton.textContent = "🌝"; // Sun emoji
+        themeIcon.src = "images/lightmoon.jpg"; 
     } else {
-        toggleButton.textContent = "🌚"; // Moon emoji
+        document.body.classList.remove("dark-mode");
+        themeIcon.src = "images/darkmoon.jpg";
     }
 
-    // Add event listener for toggle
     toggleButton.addEventListener("click", function () {
         document.body.classList.toggle("dark-mode");
-
         if (document.body.classList.contains("dark-mode")) {
+            themeIcon.src = "images/lightmoon.jpg"; 
             localStorage.setItem("theme", "dark");
-            toggleButton.textContent = "🌝";
         } else {
+            themeIcon.src = "images/darkmoon.jpg"; 
             localStorage.setItem("theme", "light");
-            toggleButton.textContent = "🌚";
         }
     });
 });
+
 
