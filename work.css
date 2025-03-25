@@ -68,11 +68,10 @@ body {
     transition: background 0.3s, color 0.3s;
 }
 
-
+/* Button Styles */
 .toggle-button {
     background: transparent;
     border: none;
-    font-size: 1.8rem; 
     cursor: pointer;
     padding: 0;
     margin: 0;
@@ -81,15 +80,25 @@ body {
     justify-content: center;
 }
 
+/* Image inside Button */
+.toggle-button img {
+    width: 32px; /* Adjust size */
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+}
+
 /* Remove focus outline */
 .toggle-button:focus {
     outline: none;
     box-shadow: none;
 }
 
-.toggle-button:hover {
+/* Hover effect */
+.toggle-button:hover img {
     transform: scale(1.1);
 }
+
+
 
 .navbar a {
     text-decoration: none;
