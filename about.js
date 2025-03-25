@@ -38,6 +38,6 @@ function showSlide() {
     currentSlide = (currentSlide + 1) % slides.length;
 }
 
-setInterval(showSlide, 3000);
+setInterval(showSlide, 6000);
 document.addEventListener("DOMContentLoaded", showSlide);
 
