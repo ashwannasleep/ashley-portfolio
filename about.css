@@ -171,12 +171,17 @@ body {
 
 .slideshow-container {
     position: relative;
-    width: 600px;
-    height: 350px;
+    width: 600px;  /* Adjust width as needed */
+    height: 350px; /* Adjust height as needed */
     overflow: hidden;
     border-radius: 15px;
-    padding-top:100px;
+    margin: 20px auto; /* Centers horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+
 
 .slide {
     position: absolute;
@@ -193,19 +198,19 @@ body {
     border-radius: 15px;
 }
 
-/* 讓當前圖片顯示 */
+
 .active {
     opacity: 1;
     transform: translateX(0);
 }
 
-/* 下一張滑入 */
+
 .next {
     opacity: 0;
     transform: translateX(100%);
 }
 
-/* 前一張滑出 */
+
 .prev {
     opacity: 0;
     transform: translateX(-100%);
