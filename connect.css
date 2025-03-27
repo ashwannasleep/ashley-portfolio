@@ -149,8 +149,12 @@ body {
     --icon-bg: rgba(255, 255, 255, 0.1);
 }
 
-.no-invert {
-    filter: none !important;
+footer img {
+    filter: none !important;  
+    display: block;
+    margin: 0 auto;  
+    max-width: 300px;  
+    height: auto;
 }
 
 
