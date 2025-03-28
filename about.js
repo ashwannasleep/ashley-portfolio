@@ -41,3 +41,23 @@ function showSlide() {
 setInterval(showSlide, 6000);
 document.addEventListener("DOMContentLoaded", showSlide);
 
+document.addEventListener("DOMContentLoaded", function() {
+    let backToTopBtn = document.getElementById("backToTop");
+
+    
+    window.onscroll = function() {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            backToTopBtn.style.display = "flex";
+        } else {
+            backToTopBtn.style.display = "none";
+        }
+    };
+
+    // Scroll to top when clicked
+    backToTopBtn.addEventListener("click", function() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+});
