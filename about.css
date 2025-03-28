@@ -228,6 +228,29 @@ body {
     padding-top: 200px;
 }
 
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: none; 
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease, transform 0.2s ease-in-out;
+}
+
+#backToTop:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+
 footer {
     position: absolute;
     bottom: 0;
