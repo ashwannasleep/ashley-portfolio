@@ -1,114 +1,37 @@
 html {
     font-size: clamp(14px, 1.5vw, 18px);
   }
-  
+
   body {
     margin: 0;
     padding: 0;
     width: 100%;
     min-height: 100vh;
+    max-height: 1200px;
+    overflow-y: auto;
     background-color: #F4EFEF;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: 'Poppins', sans-serif;
   }
+
+main {
+    flex:1;
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+      flex-direction: column;
+      padding: 80px 1rem;
+      text-align: center;
+    }
   
-  main {
-    flex: 1;
+    .hero-image {
+      margin-top: 40px;
+    }
   }
   
-  .header-container {
-    width: 100%;
-    max-width: 1440px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-  
-  .header-logo img {
-    position: absolute;
-    width: 80px;
-    top: 15px;
-    left: 20px;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .header-logo img:hover {
-    transform: scale(1.1);
-  }
-  
-  .nav-buttons {
-    display: flex;
-    gap: 2vw;
-    font-size: 1.6rem;
-    padding: 2rem;
-    font-weight: bold;
-    font-family: 'Jockey One', sans-serif;
-  }
-  
-  .navbar a {
-    text-decoration: none;
-    color: #333;
-  }
-  
-  .navbar a:hover {
-    transform: scale(1.1);
-  }
-  
-  .hero-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1440px;
-    padding: 150px 0;
-    box-sizing: border-box;
-  }
-  
-  .hero-text {
-    max-width: 600px;
-  }
-  
-  .hero-heading {
-    font-family: 'Jockey One', sans-serif;
-    font-size: clamp(2rem, 8vw, 5rem);
-    font-weight: bold;
-  }
-  
-  .hero-subtext {
-    font-family: 'Times New Roman', serif;
-    font-size: clamp(1.25rem, 4vw, 2rem);
-  }
-  
-  .hero-image {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .hero-image img {
-    width: clamp(200px, 30vw, 330px);
-    height: auto;
-    transform: scaleX(-1);
-    margin-top: 150px;
-  }
-  
-  /* 🌞 Light Mode (Default) */
-  :root {
-    --card-bg: #E9D9D9;
-    --card-shadow: rgba(0, 0, 0, 0.1);
-  }
-  
-  /* 🌙 Dark Mode */
-  body.dark-mode {
-    --card-bg: #292D33;
-    --card-shadow: rgba(255, 255, 255, 0.1);
-  }
-  
-  /* ✅ Responsive: Mobile */
   @media (max-width: 768px) {
     .header-container {
       flex-direction: column;
@@ -116,21 +39,126 @@ html {
     }
   
     .nav-buttons {
+      position: static;
       flex-direction: column;
       align-items: center;
       gap: 1rem;
       font-size: 1.2rem;
       padding: 1rem;
     }
+  }
   
-    .hero-container {
+  @media (max-width: 480px) {
+    .nav-buttons {
       flex-direction: column;
-      padding: 80px 1rem;
-      text-align: center;
-    }
-  
-    .hero-image img {
-      margin-top: 40px;
+      gap: 1rem;
+      padding: 1rem;
+      font-size: 1.2rem;
     }
   }
   
+
+
+.header-container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 80px 1rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    align-items:center;
+    padding: 20px;
+}
+
+
+
+.header-logo img {
+    position:absolute;
+    width: 80px;
+    top:15px;
+    left: 20px;
+    cursor: pointer; 
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.header-logo img:hover {
+    transform: scale(1.1);
+}
+
+.nav-buttons {
+    position: relative; 
+    top: 0; 
+    right: 0;
+    display: flex;
+    gap: 2vw;
+    font-size: 1.6rem;
+    padding: 2rem;
+    font-weight: bold;
+    font-family: 'Jockey One', sans-serif;
+}
+
+
+
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+}
+
+
+.navbar a:hover {
+    transform: scale(1.1);
+}
+
+
+
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    padding: 150px 0;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-heading {
+    font-family: 'Jockey One', sans-serif;
+    font-size: clamp(2rem, 8vw, 5rem);
+    font-weight: bold;
+    position:relative;
+}
+
+.hero-subtext {
+    font-family: 'Times New Roman', serif;
+    font-size: clamp(1.25rem, 4vw, 2rem);
+}
+
+
+.hero-image img {
+    width: clamp(200px, 30vw, 330px);
+    height:auto;
+    transform:scaleX(-1);
+    margin-top:150px;
+}
+
+.hero-image {
+    position: relative;
+    display: inline-block;
+}
+
+/* 🌞 Light Mode (Default) */
+:root {
+    --card-bg: #E9D9D9;  /* Light pink */
+    --card-shadow: rgba(0, 0, 0, 0.1); 
+}
+
+/* 🌙 Dark Mode (Ensuring Similar Contrast to Light Mode) */
+body.dark-mode {
+    --card-bg: #292D33;  /* Dark but slightly warm */
+    --card-shadow: rgba(255, 255, 255, 0.1);
+}
