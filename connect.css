@@ -155,14 +155,4 @@ footer img {
     margin: 0 auto;  
     max-width: 300px;  
     height: auto;
-    position:relative;
 }
-
-@media (max-width: 600px) {
-  .footer {
-    display: none;
-  }
-}
-
-
-
