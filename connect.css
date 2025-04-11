@@ -149,15 +149,32 @@ body {
     --icon-bg: rgba(255, 255, 255, 0.1);
 }
 
-footer img {
-    filter: none !important;  
-    display: block;
-    margin: 0 auto;  
-    max-width: 300px;  
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-family: 'Merriweather', serif;
+    color: var(--text-color);
+    background-color: transparent;
+    z-index: 999;
+}
+
+.footer img {
+    max-width: 60px;
     height: auto;
 }
 
-
+@media (max-width: 600px) {
+  .footer {
+    display: none;
+  }
+}
 
 
 
