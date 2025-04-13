@@ -1,0 +1,344 @@
+body {
+    position:relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-height: 2800px; 
+    min-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #F4EFEF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 1001;
+    }
+  
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background-color: var(--text-color);
+      transition: all 0.3s ease;
+    }
+  
+    .nav-buttons {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      width: 220px;
+      background-color: var(--card-bg);
+      flex-direction: column;
+      align-items: center;
+      padding-top: 100px;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
+  
+    .nav-buttons.open {
+      transform: translateX(0);
+    }
+  
+    .nav-buttons a,
+    .nav-buttons button {
+      margin: 15px 0;
+    }
+  }
+  
+  .toggle-button {
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+  
+  .toggle-button:focus-visible,
+  .toggle-button img:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
+/* Header */
+.header-container {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    justify-content: flex-end;
+    align-items:center;
+    padding: 20px;
+}
+
+
+/* Logo */
+.header-logo img {
+    position:absolute;
+    width: 80px;
+    top:15px;
+    left: 20px;
+    cursor: pointer; 
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.header-logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Light Mode (Default) */
+:root {
+    --bg-color: #F4EFEF;
+    --text-color: #333;
+}
+
+/* Dark Mode */
+.dark-mode {
+    --bg-color: #1e1e1e;
+    --text-color: #ffffff; /* Ensures text is visible in dark mode */
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.3s, color 0.3s;
+}
+
+
+/* Navigation */
+.nav-buttons {
+    position: absolute; 
+    top: 0; 
+    right: 0;
+    display: flex;
+    gap: 2vw;
+    font-size: 1.6rem;
+    padding: 2rem;
+    font-weight: bold;
+    font-family: 'Jockey One', sans-serif;
+}
+
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+}
+
+
+.navbar a:hover {
+    transform: scale(1.1);
+}
+
+
+.about-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 1.5rem;
+    margin: 8rem auto 4rem;
+    box-sizing: border-box;
+  }
+  
+
+.about-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    
+}
+
+
+.about-content,
+.outside-content {
+  font-size: clamp(1rem, 2.2vw, 1.5rem);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 800px;
+  word-wrap: break-word;
+}
+
+
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 200px;
+}
+
+/* Marquee Container */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    background: transparent;
+    white-space: nowrap;
+    position: relative;
+    padding: 20px 0;
+    margin-top: 100px;
+}
+
+
+.marquee {
+    display: flex;
+    width: 100%;
+}
+
+
+.marquee-track {
+    display: flex;
+    gap: 50px;
+    animation: marqueeScroll 25s linear infinite;
+}
+
+.tool {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Jockey One', sans-serif;
+    color: var(--text-color);
+}
+
+/* Icons */
+.tool i {
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+/* Keyframes for continuous scrolling */
+@keyframes marqueeScroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 15px;
+    margin: 50px auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+
+.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.next {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+
+.prev {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+
+
+.location {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+    color: var(--text-color);
+    padding-top: 200px;
+}
+ 
+footer {
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: auto;
+    height:auto;
+    padding:1rem;
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease, transform 0.2s ease-in-out;
+}
+
+#backToTop:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+
+
+footer img{
+    transition: filter 0.3s ease-in-out;
+}
+
+.dark-mode footer img{
+    filter: invert(1); 
+}
+
+  
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+  

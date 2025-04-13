@@ -1,0 +1,227 @@
+body {
+    position:relative;
+    margin: 0;
+    width: 100%;
+    min-height: 1200px; /* Ensures it never goes below 2000px */
+    max-height: 1200px; /* Forces a height limit */
+    background-color: #F4EFEF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 1001;
+    }
+  
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background-color: var(--text-color);
+      transition: all 0.3s ease;
+    }
+  
+    .nav-buttons {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      width: 220px;
+      background-color: var(--card-bg);
+      flex-direction: column;
+      align-items: center;
+      padding-top: 100px;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
+  
+    .nav-buttons.open {
+      transform: translateX(0);
+    }
+  
+    .nav-buttons a,
+    .nav-buttons button {
+      margin: 15px 0;
+    }
+  }
+  
+  .toggle-button {
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+  
+  .toggle-button:focus-visible,
+  .toggle-button img:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
+/* Header */
+.header-container {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    justify-content: flex-end;
+    align-items:center;
+    padding: 20px;
+    margin-top:100px;
+}
+
+
+/* Logo */
+.header-logo img {
+    position:absolute;
+    width: 80px;
+    top:15px;
+    left: 20px;
+    cursor: pointer; 
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.header-logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Navigation */
+.nav-buttons {
+    position: absolute; 
+    top: 0; 
+    right: 0;
+    display: flex;
+    gap: 2vw;
+    font-size: 1.6rem;
+    padding: 2rem;
+    font-weight: bold;
+    font-family: 'Jockey One', sans-serif;
+}
+
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+}
+
+
+.navbar a:hover {
+    transform: scale(1.1);
+}
+
+.connect-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 150px 20px;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+
+}
+
+.connect-container h1 {
+    font-size: 40px;
+    font-weight: 700;
+    font-family: 'Jockey One', sans-serif;
+    margin-bottom: 10px;
+    color: var(--text-color);
+    text-shadow: 0px 0px 10px rgba(255, 165, 0, 0.8);
+    animation: waveGlow 3s infinite alternate ease-in-out;
+}
+
+@keyframes waveGlow {
+    0% { transform: translateY(0px); text-shadow: 0px 0px 10px rgba(255, 165, 0, 0.8); }
+    50% { transform: translateY(-5px); text-shadow: 0px 0px 20px rgba(255, 255, 0, 1); }
+    100% { transform: translateY(0px); text-shadow: 0px 0px 10px rgba(255, 165, 0, 0.8); }
+}
+
+
+.connect-container p {
+    font-size: 20px;
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+
+.connect-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+
+.connect-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: var(--icon-bg);
+    transition: transform 0.2s ease-in-out;
+}
+
+.connect-icons img {
+    width: 30px;
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+}
+
+.connect-icons img:hover {
+    transform: rotate(360deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+.connect-icons a:hover {
+    transform: scale(1.1) translateY(-5px);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+:root {
+    --text-color: #333;
+    --icon-bg: rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode {
+    --text-color: #fff;
+    --icon-bg: rgba(255, 255, 255, 0.1);
+}
+
+footer img {
+    filter: none !important;  
+    display: block;
+    margin: 0 auto;  
+    max-width: 300px; 
+    height: auto;
+}
+
+
+
+
+
+
