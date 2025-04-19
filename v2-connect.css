@@ -1,120 +1,245 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ashley Chang | UX/UI Portfolio</title>
-    <link rel="stylesheet" href="v2-style.css">
-    <script type="module" src="v2-script.js"></script>
-<script src="v2-work.js"></script>
-<link rel="stylesheet" href="v2-work.css">
+body {
+    position:relative;
+    margin: 0;
+    width: 100%;
+    min-height: 1200px; /* Ensures it never goes below 2000px */
+    max-height: 1200px; /* Forces a height limit */
+    background-color: #F4EFEF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
-    <link rel="icon" type="images/png" href="favicon.png">
-</head>
-<body>
-    <div class="page">
-    <header>
-        <div class="header-container">
-            <a href="index.html" class="header-logo">
-                <img src="v2-images/logo.png" alt="Logo">
-            </a>
-
-            <nav class="navbar">
-                <button id="hamburger" class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <div class="nav-buttons" id="nav-links">
-                  <button id="theme-toggle" class="toggle-button">
-                        <img src="v2-images/darkmoon.jpg" alt="Dark Mode" class="emoji-icon">
-                    </button>
-                    <a href="index.html" class="aboutmebutton">Home</a>
-                    <a href="v2-about.html" class="aboutmebutton">About me</a>
-                    <a href="v2-work.html" class="myworkbutton">My Work</a>
-                    <a href="v2-connect.html" class="letsconnectbutton">Let's Connect</a>
-                </div>
-            </nav>
-        </div>
-    </header>
-
+@media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 1001;
+    }
+  
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background-color: var(--text-color);
+      transition: all 0.3s ease;
+    }
+  
     
 
-    <main>
-        <main>
-            <section class="hero-section">
-                <div class="hero-content">
-                  <h1 class="typing-heading">Hello, Ashley here</h1>
-                  <p class="hero-subtext">A UX/UI designer passionate about creating intuitive and user-centered designs.</p>
-                </div>
-                <div class="hero-image">
-                  <img src="v2-images/Waving.png" alt="Waving Memoji" />
-                </div>
-              </section>
-              
-          </main>
-          
-        
-        <section class="music-block">
-            <p class="music-intro">Now playing while building...</p>
-            <div class="spotify-player">
-              <iframe style="border-radius:12px"
-                src="https://open.spotify.com/embed/playlist/4sGj59LB1O1KCquyZLTjts?utm_source=generator&theme=0"
-                width="100%" height="80" frameBorder="0" allowfullscreen=""
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy">
-              </iframe>
-            </div>
-          
-            <h2 class="recently-title">Recently Played</h2>
-            <div class="song-list">
-                <div class="song-list">
-                    
-                    <div class="song-card">
-                      <img src="v2-images/fuji.jpg" alt="Shinunoga E-Wa cover">
-                      <div class="song-info">
-                        <h3>Shinunoga E-Wa</h3>
-                        <p>Fujii Kaze</p>
-                        <a href="https://open.spotify.com/track/xyz" target="_blank">► Preview on Spotify</a>
-                      </div>
-                    </div>
-                  
-                    
-                    <div class="song-card">
-                      <img src="v2-images/leon.jpg" alt="Mutt cover">
-                      <div class="song-info">
-                        <h3>Mutt</h3>
-                        <p>Leon Thomas</p>
-                        <a href="https://open.spotify.com/track/1mh9eHVRdNhzryG43PXdW1?si=cd8963e849d84279" target="_blank">► Preview on Spotify</a>
-                      </div>
-                    </div>
-                  
-                    
-                    <div class="song-card">
-                      <img src="v2-images/babymonster.jpg" alt="Really Like You cover">
-                      <div class="song-info">
-                        <h3>Really Like You</h3>
-                        <p>BABYMONSTER</p>
-                        <a href="https://open.spotify.com/track/3entdIWiOuQfcXIkJEABsV?si=3f84b788e886464a" target="_blank">► Preview on Spotify</a>
-                      </div>
-                    </div>
-                  </div>
-                  
-          </section>
-          
-          
-          
-          
-                  
-    </main>
+    .nav-buttons {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      width: 220px;
+      background-color: var(--card-bg);
+      flex-direction: column;
+      align-items: center;
+      padding-top: 100px;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
+  
+    .nav-buttons.open {
+      transform: translateX(0);
+    }
+  
+    .nav-buttons a,
+    .nav-buttons button {
+      margin: 15px 0;
+    }
+  }
+  
+  .hamburger {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+  }
 
-    <footer>
-        <p>@ 2025 Ashley Chang. All Rights Reserved.</p>
-    </footer>
-    </div>
-    <button id="backToTop" title="Go to top">↑</button>
-</body>
-</html>
- 
+  .toggle-button {
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+  
+  .toggle-button:focus-visible,
+  .toggle-button img:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
+/* Header */
+.header-container {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    justify-content: flex-end;
+    align-items:center;
+    padding: 20px;
+    margin-top:100px;
+}
+
+
+/* Logo */
+.header-logo img {
+    position:absolute;
+    width: 80px;
+    top:15px;
+    left: 20px;
+    cursor: pointer; 
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.header-logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Navigation */
+.nav-buttons {
+    position: absolute; 
+    top: 0; 
+    right: 0;
+    display: flex;
+    gap: 2vw;
+    font-size: 1.6rem;
+    padding: 2rem;
+    font-weight: bold;
+    font-family: 'Jockey One', sans-serif;
+}
+
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+}
+
+
+.navbar a:hover {
+    transform: scale(1.1);
+}
+
+.connect-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 150px 20px;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+
+}
+
+.connect-container h1 {
+    font-size: 40px;
+    font-weight: 700;
+    font-family: 'Jockey One', sans-serif;
+    margin-bottom: 10px;
+    color: var(--text-color);
+    text-shadow: 0px 0px 10px rgba(255, 165, 0, 0.8);
+    animation: waveGlow 3s infinite alternate ease-in-out;
+}
+
+@keyframes waveGlow {
+    0% { transform: translateY(0px); text-shadow: 0px 0px 10px rgba(255, 165, 0, 0.8); }
+    50% { transform: translateY(-5px); text-shadow: 0px 0px 20px rgba(255, 255, 0, 1); }
+    100% { transform: translateY(0px); text-shadow: 0px 0px 10px rgba(255, 165, 0, 0.8); }
+}
+
+
+.connect-container p {
+    font-size: 20px;
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+
+.connect-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+
+.connect-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: var(--icon-bg);
+    transition: transform 0.2s ease-in-out;
+}
+
+.connect-icons img {
+    width: 30px;
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+}
+
+.connect-icons img:hover {
+    transform: rotate(360deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+.connect-icons a:hover {
+    transform: scale(1.1) translateY(-5px);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+:root {
+    --text-color: #333;
+    --icon-bg: rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode {
+    --text-color: #fff;
+    --icon-bg: rgba(255, 255, 255, 0.1);
+}
+footer-1 p{
+    left:0; 
+    bottom:0;
+    position: fixed;
+
+}
+footer img {
+    filter: none !important;  
+    bottom:0; 
+    left:0;
+    max-width: 300px; 
+    height: auto;
+    position: fixed;
+    margin-bottom: 50px;
+    margin-left:20px;
+}
+
+
+
+
+
+
