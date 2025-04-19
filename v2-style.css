@@ -132,6 +132,13 @@ html {
     transform: scale(1.1);
 }
 
+.hamburger {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
 
 
 .typing-heading {
