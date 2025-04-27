@@ -140,6 +140,7 @@ body {
     align-items: center;
     font-family: 'Poppins', sans-serif;
     transition: background 0.3s, color 0.3s;
+    overflow-x: hidden;
 }
 
 /* Button Styles */
