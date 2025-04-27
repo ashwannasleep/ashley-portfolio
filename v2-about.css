@@ -55,7 +55,57 @@ body {
       transform: translateX(0);
     }
   
-
+    .about-container {
+        width: 100%;
+        padding: 0 20px; /* ← add breathing room */
+        margin: 6rem auto 2rem;
+        box-sizing: border-box;
+      }
+    
+      .about-heading {
+        font-size: 1.8rem;
+        text-align: center;
+      }
+    
+      .about-content,
+      .outside-content {
+        font-size: 1rem;
+        line-height: 1.5;
+        text-align: center;
+        padding: 0 10px;
+        max-width: 100%; 
+        box-sizing: border-box; 
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+      }
+    
+      .section-title {
+        font-size: 1.6rem;
+        margin-top: 100px;
+        text-align: center;
+      }
+    
+      .marquee-container {
+        margin-top: 50px;
+        padding: 10px 0;
+      }
+    
+      .tool {
+        font-size: 1.2rem;
+        gap: 8px;
+      }
+    
+      .location {
+        font-size: 1rem;
+        margin-top: 100px;
+        padding-top: 100px;
+        text-align: center;
+      }
+    
+      .slideshow-container {
+        max-width: 90%;
+        border-radius: 10px;
+      }
   }
   
   .nav-buttons button:empty {
@@ -331,15 +381,6 @@ footer {
 #backToTop:hover {
     background-color: #555;
     transform: scale(1.1);
-}
-
-
-footer img{
-    transition: filter 0.3s ease-in-out;
-}
-
-.dark-mode footer img{
-    filter: invert(1); 
 }
 
   
