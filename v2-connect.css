@@ -58,6 +58,36 @@ body {
     .nav-buttons button {
       margin: 15px 0;
     }
+    
+    .connect-container {
+        padding: 100px 20px;
+      }
+    
+      .connect-container h1 {
+        font-size: 28px;
+        text-align: center;
+      }
+    
+      .connect-container p {
+        font-size: 16px;
+        text-align: center;
+        padding: 0 10px;
+      }
+    
+      .connect-icons {
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 30px;
+      }
+    
+      .connect-icons a {
+        width: 40px;
+        height: 40px;
+      }
+    
+      .connect-icons img {
+        width: 24px;
+      }
   }
   
   .hamburger {
